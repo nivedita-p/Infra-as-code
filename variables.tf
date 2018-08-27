@@ -31,3 +31,6 @@ variable "network_name" {
   default = "network2"
 }
 
+variable "no_of_vms" {
+  default = 3
+}

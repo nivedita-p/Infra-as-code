@@ -52,7 +52,7 @@ module "managed-webserver-group" {
   autoscaling_cpu = [{
     target = 0.8
   }]
-  size                      = 3
+  size                      = "${var.no_of_vms}"
   min_replicas              = 3
   max_replicas              = 5
   service_port              = 80
