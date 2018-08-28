@@ -1,6 +1,6 @@
 # Specify name of the project here
 variable "project" {
-  default = "npaul-203410"
+  default = "vagarwal-203410"
 }
 
 variable "labels" {
@@ -11,6 +11,10 @@ variable "labels" {
 # Specify the port on which to listen for the service here
 variable "service_port" {
  default = 80
+}
+
+variable "name" {
+ default = "nivi-mig"
 }
 
 # Specify the port name here, will be used for healthcheck
@@ -31,9 +35,14 @@ provider "google" {
   region = "${var.region}"
 }
 
-variable "network_name" {
+variable "network" {
   default = "network2"
 }
+
+variable "subnetwork" {
+  default = "network2"
+}
+
 
 # Change this to scale out or in
 variable "no_of_vms" {
